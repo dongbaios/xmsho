@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PNN-wH-Zzj">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xCD-3u-GCy">
+            <objects>
+                <navigationController id="PNN-wH-Zzj" customClass="XMNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KpZ-aQ-1gW">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QnQ-cc-0Tr" kind="relationship" relationship="rootViewController" id="2UC-1Y-b6t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYY-dL-eUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1178" y="-269"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="hxE-AU-fua">
+            <objects>
+                <viewController id="QnQ-cc-0Tr" customClass="LDHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ThN-Dp-4Yi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOM-UK-FaB">
+                                <rect key="frame" x="320" y="88" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CXO-7J-FCh"/>
+                                    <constraint firstAttribute="width" constant="50" id="Z39-mh-NbO"/>
+                                </constraints>
+                                <state key="normal" image="hanbao"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBg-yE-ml7" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xsA-gc-DZK">
+                                        <rect key="frame" x="168" y="595" width="39" height="37"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="xsA-gc-DZK" secondAttribute="bottom" constant="50" id="imG-ln-K8r"/>
+                                    <constraint firstItem="xsA-gc-DZK" firstAttribute="centerX" secondItem="sBg-yE-ml7" secondAttribute="centerX" id="nRF-vi-dOg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QGv-PX-xZw" firstAttribute="trailing" secondItem="sBg-yE-ml7" secondAttribute="trailing" id="3mr-Jx-4HN"/>
+                            <constraint firstItem="sBg-yE-ml7" firstAttribute="leading" secondItem="QGv-PX-xZw" secondAttribute="leading" id="4JB-qM-NWe"/>
+                            <constraint firstItem="sBg-yE-ml7" firstAttribute="top" secondItem="QGv-PX-xZw" secondAttribute="top" id="B3g-tW-iHP"/>
+                            <constraint firstItem="SOM-UK-FaB" firstAttribute="top" secondItem="QGv-PX-xZw" secondAttribute="top" id="MZm-ok-J6J"/>
+                            <constraint firstItem="QGv-PX-xZw" firstAttribute="bottom" secondItem="sBg-yE-ml7" secondAttribute="bottom" id="THM-9q-fnC"/>
+                            <constraint firstItem="QGv-PX-xZw" firstAttribute="trailing" secondItem="SOM-UK-FaB" secondAttribute="trailing" constant="5" id="rUN-GE-p3w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QGv-PX-xZw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0fP-VZ-iYn"/>
+                    <connections>
+                        <outlet property="pageControl" destination="xsA-gc-DZK" id="3Rv-7w-7jF"/>
+                        <outlet property="scrollView" destination="sBg-yE-ml7" id="qan-ae-gMi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GbG-E6-ZGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="-243"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hanbao" width="22" height="20"/>
+    </resources>
+</document>

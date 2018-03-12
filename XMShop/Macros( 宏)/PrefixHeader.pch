@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  XMShop
+//
+//  Created by apple on 2018/3/8.
+//  Copyright © 2018年 RM. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Headers.h"
+
+#endif /* PrefixHeader_pch */

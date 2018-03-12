@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LDMenuContentView">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="218"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzF-4U-YSO" customClass="DCUpDownButton">
+                    <rect key="frame" x="0.0" y="0.0" width="108.5" height="109"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="库存" image="kucun_icon"/>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="aKb-se-fvs"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO4-E7-97H" customClass="DCUpDownButton">
+                    <rect key="frame" x="108.5" y="0.0" width="109" height="109"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="客户管理" image="kehu_icon"/>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="R7L-Qx-pXH"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlC-LF-lAE" customClass="DCUpDownButton">
+                    <rect key="frame" x="217.5" y="0.0" width="108.5" height="109"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="销售录单" image="danju_icon">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="d0P-o7-xMY"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPv-bT-OE3" customClass="DCUpDownButton">
+                    <rect key="frame" x="0.0" y="109" width="108.5" height="109"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="采购录单" image="caigou_icon"/>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="gmw-MD-GDQ"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRX-C4-5dm" customClass="DCUpDownButton">
+                    <rect key="frame" x="108.5" y="109" width="108.5" height="109"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="业务单据" image="yewudanju_icon"/>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="V1a-Zg-aMd"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-bc-iA5" customClass="DCUpDownButton">
+                    <rect key="frame" x="217" y="109" width="108.5" height="109"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Button" image="hanbao"/>
+                    <connections>
+                        <action selector="click:" destination="iN0-l3-epB" eventType="touchUpInside" id="5WY-Wh-k7h"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zlC-LF-lAE" firstAttribute="width" secondItem="RzF-4U-YSO" secondAttribute="width" id="0Z1-zr-OyP"/>
+                <constraint firstItem="LPv-bT-OE3" firstAttribute="height" secondItem="RzF-4U-YSO" secondAttribute="height" id="0q5-B7-d4i"/>
+                <constraint firstItem="SBj-bc-iA5" firstAttribute="width" secondItem="RzF-4U-YSO" secondAttribute="width" id="1a4-RO-GSe"/>
+                <constraint firstItem="fO4-E7-97H" firstAttribute="leading" secondItem="RzF-4U-YSO" secondAttribute="trailing" id="34v-Ql-WBA"/>
+                <constraint firstAttribute="trailing" secondItem="SBj-bc-iA5" secondAttribute="trailing" id="5NA-1S-cAv"/>
+                <constraint firstAttribute="bottom" secondItem="LPv-bT-OE3" secondAttribute="bottom" id="9c8-PT-eVw"/>
+                <constraint firstItem="jRX-C4-5dm" firstAttribute="top" secondItem="fO4-E7-97H" secondAttribute="bottom" id="Aym-w2-rGC"/>
+                <constraint firstItem="zlC-LF-lAE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J2j-10-gPM"/>
+                <constraint firstItem="fO4-E7-97H" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MEJ-12-AR3"/>
+                <constraint firstItem="jRX-C4-5dm" firstAttribute="height" secondItem="RzF-4U-YSO" secondAttribute="height" id="Oyz-OJ-uQI"/>
+                <constraint firstItem="RzF-4U-YSO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yij-bY-nCi"/>
+                <constraint firstItem="LPv-bT-OE3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aJs-JZ-fUE"/>
+                <constraint firstItem="SBj-bc-iA5" firstAttribute="top" secondItem="zlC-LF-lAE" secondAttribute="bottom" id="boF-aZ-7qy"/>
+                <constraint firstAttribute="trailing" secondItem="zlC-LF-lAE" secondAttribute="trailing" id="flo-IS-Fi6"/>
+                <constraint firstItem="SBj-bc-iA5" firstAttribute="height" secondItem="RzF-4U-YSO" secondAttribute="height" id="jqL-rK-cbP"/>
+                <constraint firstItem="LPv-bT-OE3" firstAttribute="width" secondItem="RzF-4U-YSO" secondAttribute="width" id="m00-6L-tdi"/>
+                <constraint firstItem="zlC-LF-lAE" firstAttribute="height" secondItem="RzF-4U-YSO" secondAttribute="height" id="mLQ-Jv-G4Q"/>
+                <constraint firstItem="jRX-C4-5dm" firstAttribute="width" secondItem="RzF-4U-YSO" secondAttribute="width" id="nTP-rx-x24"/>
+                <constraint firstAttribute="bottom" secondItem="SBj-bc-iA5" secondAttribute="bottom" id="noq-jF-NTu"/>
+                <constraint firstItem="jRX-C4-5dm" firstAttribute="leading" secondItem="LPv-bT-OE3" secondAttribute="trailing" id="ntV-HU-Bsk"/>
+                <constraint firstItem="fO4-E7-97H" firstAttribute="width" secondItem="RzF-4U-YSO" secondAttribute="width" id="qFv-aG-T5k"/>
+                <constraint firstItem="zlC-LF-lAE" firstAttribute="leading" secondItem="fO4-E7-97H" secondAttribute="trailing" id="rmn-ZN-JRj"/>
+                <constraint firstItem="RzF-4U-YSO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tif-VO-4yL"/>
+                <constraint firstAttribute="bottom" secondItem="jRX-C4-5dm" secondAttribute="bottom" id="tzA-XF-bXd"/>
+                <constraint firstItem="LPv-bT-OE3" firstAttribute="top" secondItem="RzF-4U-YSO" secondAttribute="bottom" id="vOe-lK-d7n"/>
+                <constraint firstItem="fO4-E7-97H" firstAttribute="height" secondItem="RzF-4U-YSO" secondAttribute="height" id="y3Z-OI-7cJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="10" y="-171"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="caigou_icon" width="32" height="32"/>
+        <image name="danju_icon" width="32" height="32"/>
+        <image name="hanbao" width="22" height="20"/>
+        <image name="kehu_icon" width="32" height="32"/>
+        <image name="kucun_icon" width="32" height="32"/>
+        <image name="yewudanju_icon" width="32" height="32"/>
+    </resources>
+</document>

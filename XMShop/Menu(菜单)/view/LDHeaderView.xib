@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LDHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0T-mD-GQQ">
+                    <rect key="frame" x="0.0" y="0.0" width="203" height="160"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日销售" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ime-ed-u3F">
+                            <rect key="frame" x="72.5" y="52" width="57.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhc-MI-5eC">
+                            <rect key="frame" x="72.5" y="86.5" width="27.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ime-ed-u3F" firstAttribute="centerY" secondItem="h0T-mD-GQQ" secondAttribute="centerY" constant="-19.5" id="2tm-4w-FMN"/>
+                        <constraint firstItem="qhc-MI-5eC" firstAttribute="leading" secondItem="Ime-ed-u3F" secondAttribute="leading" id="NYN-Sg-Hu8"/>
+                        <constraint firstItem="qhc-MI-5eC" firstAttribute="centerY" secondItem="h0T-mD-GQQ" secondAttribute="centerY" constant="14" id="X4g-44-vTa"/>
+                        <constraint firstItem="Ime-ed-u3F" firstAttribute="centerX" secondItem="h0T-mD-GQQ" secondAttribute="centerX" id="hB2-8f-1Zj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVN-aG-Jwj">
+                    <rect key="frame" x="203" y="0.0" width="203" height="160"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taizi_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ygv-mt-kD5">
+                            <rect key="frame" x="76.5" y="55.5" width="50" height="50"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ygv-mt-kD5" firstAttribute="centerX" secondItem="oVN-aG-Jwj" secondAttribute="centerX" id="Bdd-Ns-Oc4"/>
+                        <constraint firstItem="ygv-mt-kD5" firstAttribute="centerY" secondItem="oVN-aG-Jwj" secondAttribute="centerY" id="SPE-pt-yMr"/>
+                    </constraints>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="统计报表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdL-gN-NZp">
+                    <rect key="frame" x="168.5" y="49.5" width="69.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oVN-aG-Jwj" secondAttribute="trailing" id="4hi-me-MNb"/>
+                <constraint firstItem="h0T-mD-GQQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7UT-gl-h08"/>
+                <constraint firstItem="oVN-aG-Jwj" firstAttribute="leading" secondItem="h0T-mD-GQQ" secondAttribute="trailing" id="HDh-p5-Xyo"/>
+                <constraint firstItem="HdL-gN-NZp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="L4h-3A-B1x"/>
+                <constraint firstItem="HdL-gN-NZp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QjX-Kr-Bdq"/>
+                <constraint firstItem="oVN-aG-Jwj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fQH-1P-u4S"/>
+                <constraint firstAttribute="bottom" secondItem="h0T-mD-GQQ" secondAttribute="bottom" id="gMh-yU-pYI"/>
+                <constraint firstAttribute="bottom" secondItem="oVN-aG-Jwj" secondAttribute="bottom" id="kU2-Rc-ZZ1"/>
+                <constraint firstItem="h0T-mD-GQQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mHX-iM-877"/>
+                <constraint firstItem="h0T-mD-GQQ" firstAttribute="width" secondItem="oVN-aG-Jwj" secondAttribute="width" id="oph-4E-XzT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bigTitle" destination="HdL-gN-NZp" id="OSy-TQ-KHB"/>
+                <outlet property="imageV" destination="ygv-mt-kD5" id="buH-p2-5HR"/>
+                <outlet property="num" destination="qhc-MI-5eC" id="CPi-5Q-1Yd"/>
+                <outlet property="title" destination="Ime-ed-u3F" id="EPM-se-P8x"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="-195"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="taizi_icon" width="50" height="50"/>
+    </resources>
+</document>
