@@ -7,8 +7,10 @@
 //
 
 #import "XMBaseViewController.h"
+#import "LDNavBar.h"
 
 @interface XMBaseViewController ()
+@property (strong,nonatomic)LDNavBar *navBar;
 
 @end
 
@@ -16,7 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    [self setNavi];
+    
+}
+
+- (void)setNavi{
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.navigationController.navigationBarHidden = YES;
+    
+    _navBar = [LDNavBar dc_viewFromXib];
+    _navBar.title.text = @"";
+    [_navBar.backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [_navBar.settingBtn addTarget:self action:@selector(setting) forControlEvents:UIControlEventTouchUpInside];
+    _navBar.frame = CGRectMake(0, DCStatusBarH, self.view.width, 44);
+    [self.view addSubview:_navBar];
+}
+
+#pragma mark -  事件处理
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)setting{
+    
 }
 
 - (void)didReceiveMemoryWarning {

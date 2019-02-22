@@ -32,6 +32,7 @@
 		18E58ED520528D0B00C08E63 /* XMGoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E58ED320528D0B00C08E63 /* XMGoodCell.m */; };
 		18E58ED620528D0B00C08E63 /* XMGoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E58ED420528D0B00C08E63 /* XMGoodCell.xib */; };
 		18E58ED9205290B000C08E63 /* FTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E58ED7205290B000C08E63 /* FTLabel.m */; };
+		DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */; };
 		DD8503772056B91B00C4B750 /* XMDetailPopview.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8503762056B91B00C4B750 /* XMDetailPopview.m */; };
 		DD8503792056B92600C4B750 /* XMDetailPopview.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8503782056B92600C4B750 /* XMDetailPopview.xib */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,8 @@
 		18E58ED420528D0B00C08E63 /* XMGoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGoodCell.xib; sourceTree = "<group>"; };
 		18E58ED7205290B000C08E63 /* FTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTLabel.m; sourceTree = "<group>"; };
 		18E58ED8205290B000C08E63 /* FTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLabel.h; sourceTree = "<group>"; };
+		DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMAddGoodViewController.h; sourceTree = "<group>"; };
+		DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMAddGoodViewController.m; sourceTree = "<group>"; };
 		DD8503752056B91B00C4B750 /* XMDetailPopview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMDetailPopview.h; sourceTree = "<group>"; };
 		DD8503762056B91B00C4B750 /* XMDetailPopview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMDetailPopview.m; sourceTree = "<group>"; };
 		DD8503782056B92600C4B750 /* XMDetailPopview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMDetailPopview.xib; sourceTree = "<group>"; };
@@ -277,6 +280,7 @@
 		18E58EBF205287A500C08E63 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */,
 				18E58ECD20528C1C00C08E63 /* XMStockViewController.h */,
 				18E58ECE20528C1C00C08E63 /* XMStockViewController.m */,
 				18E58ECF20528C1C00C08E63 /* XMStockViewController.xib */,
@@ -295,6 +299,15 @@
 				DD8503782056B92600C4B750 /* XMDetailPopview.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */ = {
+			isa = PBXGroup;
+			children = (
+				DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */,
+				DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */,
+			);
+			path = "addGood(添加商品)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */,
 				183CCA9B204FEF8400B63AA3 /* LDMenuContentView.m in Sources */,
 				18E58EC6205289C300C08E63 /* XMNavigationController.m in Sources */,
 				18E58ED020528C1C00C08E63 /* XMStockViewController.m in Sources */,

@@ -9,8 +9,9 @@
 #import "XMStockViewController.h"
 #import "XMGoodCell.h"
 #import "XMDetailPopview.h"
-@interface XMStockViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface XMStockViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (weak, nonatomic) IBOutlet UITextField *searchBar;
 
 @end
 
@@ -18,8 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
+- (IBAction)endedit:(UITextField *)sender {
+    [self.view endEditing:YES];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES];
+    return YES;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
