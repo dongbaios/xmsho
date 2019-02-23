@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManager (6.2.0)
+  - MJExtension (3.0.15.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - MJExtension
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManager
+    - MJExtension
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 16f6c7f5bc02bc3a680595ec8470da78c64403d2
+
+COCOAPODS: 1.5.3

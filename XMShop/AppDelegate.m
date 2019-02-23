@@ -16,8 +16,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self setNavi];
+    
     sleep(1);
     return YES;
+}
+
+- (void)setNavi{
+    //隐藏导航栏下面的线
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    [UINavigationBar appearance].translucent = NO;
 }
 
 

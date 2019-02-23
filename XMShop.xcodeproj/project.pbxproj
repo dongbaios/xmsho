@@ -32,6 +32,8 @@
 		18E58ED520528D0B00C08E63 /* XMGoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E58ED320528D0B00C08E63 /* XMGoodCell.m */; };
 		18E58ED620528D0B00C08E63 /* XMGoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E58ED420528D0B00C08E63 /* XMGoodCell.xib */; };
 		18E58ED9205290B000C08E63 /* FTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E58ED7205290B000C08E63 /* FTLabel.m */; };
+		87B3A618C733F003D8EB8413 /* libPods-XMShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5FBAB803EF49C1098615BA /* libPods-XMShop.a */; };
+		DD09327A22216794001777A9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD09327922216794001777A9 /* libsqlite3.tbd */; };
 		DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */; };
 		DD8503772056B91B00C4B750 /* XMDetailPopview.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8503762056B91B00C4B750 /* XMDetailPopview.m */; };
 		DD8503792056B92600C4B750 /* XMDetailPopview.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8503782056B92600C4B750 /* XMDetailPopview.xib */; };
@@ -83,6 +85,10 @@
 		18E58ED420528D0B00C08E63 /* XMGoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMGoodCell.xib; sourceTree = "<group>"; };
 		18E58ED7205290B000C08E63 /* FTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTLabel.m; sourceTree = "<group>"; };
 		18E58ED8205290B000C08E63 /* FTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLabel.h; sourceTree = "<group>"; };
+		397CD5BA39F2142F975C7530 /* Pods-XMShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMShop/Pods-XMShop.release.xcconfig"; sourceTree = "<group>"; };
+		CB5FBAB803EF49C1098615BA /* libPods-XMShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE98B4C371C1A39E723398D /* Pods-XMShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMShop/Pods-XMShop.debug.xcconfig"; sourceTree = "<group>"; };
+		DD09327922216794001777A9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMAddGoodViewController.h; sourceTree = "<group>"; };
 		DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMAddGoodViewController.m; sourceTree = "<group>"; };
 		DD8503752056B91B00C4B750 /* XMDetailPopview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMDetailPopview.h; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD09327A22216794001777A9 /* libsqlite3.tbd in Frameworks */,
+				87B3A618C733F003D8EB8413 /* libPods-XMShop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +158,7 @@
 		183CCA80204FD0EB00B63AA3 /* third(三方) */ = {
 			isa = PBXGroup;
 			children = (
-				183CCA82204FD0F400B63AA3 /* iCarousel.h */,
-				183CCA81204FD0F400B63AA3 /* iCarousel.m */,
+				DD09327822216704001777A9 /* iCarousel */,
 			);
 			path = "third(三方)";
 			sourceTree = "<group>";
@@ -229,6 +236,8 @@
 			children = (
 				187C79C22043CF1800388505 /* XMShop */,
 				187C79C12043CF1800388505 /* Products */,
+				9221D4D71B9BD29AB556A3B1 /* Pods */,
+				B8A61D67F5A1EEA94B30A593 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,6 +310,33 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		9221D4D71B9BD29AB556A3B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCE98B4C371C1A39E723398D /* Pods-XMShop.debug.xcconfig */,
+				397CD5BA39F2142F975C7530 /* Pods-XMShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8A61D67F5A1EEA94B30A593 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD09327922216794001777A9 /* libsqlite3.tbd */,
+				CB5FBAB803EF49C1098615BA /* libPods-XMShop.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD09327822216704001777A9 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				183CCA82204FD0F400B63AA3 /* iCarousel.h */,
+				183CCA81204FD0F400B63AA3 /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
 		DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,9 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 187C79D62043CF1800388505 /* Build configuration list for PBXNativeTarget "XMShop" */;
 			buildPhases = (
+				735FC73DB0A7A75949A7DA50 /* [CP] Check Pods Manifest.lock */,
 				187C79BC2043CF1800388505 /* Sources */,
 				187C79BD2043CF1800388505 /* Frameworks */,
 				187C79BE2043CF1800388505 /* Resources */,
+				200366A7BD45152A80B58442 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,6 +420,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		200366A7BD45152A80B58442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XMShop/Pods-XMShop-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMShop/Pods-XMShop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		735FC73DB0A7A75949A7DA50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XMShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		187C79BC2043CF1800388505 /* Sources */ = {
@@ -537,6 +616,7 @@
 		};
 		187C79D72043CF1800388505 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE98B4C371C1A39E723398D /* Pods-XMShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -554,6 +634,7 @@
 		};
 		187C79D82043CF1800388505 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 397CD5BA39F2142F975C7530 /* Pods-XMShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

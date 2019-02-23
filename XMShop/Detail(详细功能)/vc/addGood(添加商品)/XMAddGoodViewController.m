@@ -8,29 +8,25 @@
 
 #import "XMAddGoodViewController.h"
 #import "LDNavBar.h"
-@interface XMAddGoodViewController ()
+@interface XMAddGoodViewController ()<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *nameLable;
+@property (weak, nonatomic) IBOutlet UILabel *typeLable;
+@property (weak, nonatomic) IBOutlet UITextField *SellPrice;
+@property (weak, nonatomic) IBOutlet UITextField *buyPriceLable;
+@property (weak, nonatomic) IBOutlet UITextField *barCode;
+@property (weak, nonatomic) IBOutlet UITextField *goodUnit;
+@property (weak, nonatomic) IBOutlet UITextField *storeNum;
+@property (weak, nonatomic) IBOutlet UITextView *descripte;
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFieldArr;
 
 @end
 
 @implementation XMAddGoodViewController
 
+#pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-}
-
-- (void)setNavi{
-    
-    
-}
-
-#pragma mark -  事件处理
-- (void)back{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)setting{
     
 }
 
@@ -39,14 +35,42 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.nameLable becomeFirstResponder];
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.view endEditing:YES];
 }
+
+#pragma mark -  事件处理
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - textfield delegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSInteger idx = [_textFieldArr indexOfObject:textField];
+    if (idx != 5) {
+        
+        [_textFieldArr[idx+1] becomeFirstResponder];
+    }else{
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

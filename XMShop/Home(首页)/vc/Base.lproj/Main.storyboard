@@ -56,7 +56,7 @@
                                 </constraints>
                                 <state key="normal" image="hanbao"/>
                                 <connections>
-                                    <segue destination="XMp-bC-Pxz" kind="push" id="bYF-IL-mS0"/>
+                                    <segue destination="XMp-bC-Pxz" kind="show" id="bYF-IL-mS0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +88,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="gU5-iu-p3F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.97254901960784312" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection footerTitle=" " id="Ccs-co-E1D">
                                 <cells>
@@ -130,10 +130,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Mo-6h-elL">
-                                                    <rect key="frame" x="100" y="13.666666666666664" width="255" height="17"/>
+                                                    <rect key="frame" x="100" y="12" width="255" height="20"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XMp-bC-Pxz" id="P1X-pZ-6T5"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -160,8 +163,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无类别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvD-uW-hEC">
-                                                    <rect key="frame" x="100" y="12" width="221" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="100" y="12.999999999999998" width="221" height="19.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -191,10 +194,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Bu-28-jz4">
-                                                    <rect key="frame" x="100" y="13.666666666666664" width="255" height="17"/>
+                                                    <rect key="frame" x="100" y="12.666666666666664" width="255" height="20"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XMp-bC-Pxz" id="v0W-Ou-F7c"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -220,11 +226,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="计算销售毛利" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-Vi-I6a">
-                                                    <rect key="frame" x="100" y="13.666666666666664" width="255" height="17"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-Vi-I6a">
+                                                    <rect key="frame" x="100" y="12.333333333333336" width="255" height="20"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XMp-bC-Pxz" id="WDK-qi-EdI"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -255,10 +264,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6E9-Ow-DpW">
-                                                    <rect key="frame" x="100" y="13.666666666666664" width="255" height="17"/>
+                                                    <rect key="frame" x="100" y="12.333333333333336" width="255" height="20"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XMp-bC-Pxz" id="kta-16-pqv"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -285,10 +297,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxx-d3-AdX">
-                                                    <rect key="frame" x="100" y="13.666666666666664" width="255" height="17"/>
+                                                    <rect key="frame" x="100" y="12.666666666666664" width="255" height="20"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XMp-bC-Pxz" id="LAa-KW-G4n"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -315,10 +330,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2g-RX-o4s">
-                                                    <rect key="frame" x="100" y="13.666666666666664" width="255" height="17"/>
+                                                    <rect key="frame" x="100" y="12.333333333333336" width="255" height="20"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="XMp-bC-Pxz" id="2kO-bY-a2P"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -351,8 +369,8 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5AN-fP-Jt2">
                                                     <rect key="frame" x="100" y="5" width="255" height="89.666666666666671"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -381,6 +399,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bny-M7-q60">
                                                     <rect key="frame" x="24" y="0.0" width="327" height="43.666666666666664"/>
                                                     <color key="backgroundColor" red="0.4941176471" green="0.69411764710000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="确认新建">
                                                         <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -409,6 +428,22 @@
                     <navigationItem key="navigationItem" title="添加商品" id="ijT-Ns-eN9"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="SellPrice" destination="8Bu-28-jz4" id="tB6-iJ-c2K"/>
+                        <outlet property="barCode" destination="6E9-Ow-DpW" id="Rik-yL-jOd"/>
+                        <outlet property="buyPriceLable" destination="ymp-Vi-I6a" id="7nl-I8-w7O"/>
+                        <outlet property="descripte" destination="5AN-fP-Jt2" id="Wtx-cK-Rih"/>
+                        <outlet property="goodUnit" destination="hxx-d3-AdX" id="pYG-Xm-cDW"/>
+                        <outlet property="nameLable" destination="7Mo-6h-elL" id="exE-8r-mst"/>
+                        <outlet property="storeNum" destination="t2g-RX-o4s" id="hgn-7x-UdZ"/>
+                        <outlet property="typeLable" destination="fvD-uW-hEC" id="Jxr-gy-fj4"/>
+                        <outletCollection property="textFieldArr" destination="7Mo-6h-elL" id="p2m-Gi-kSZ"/>
+                        <outletCollection property="textFieldArr" destination="8Bu-28-jz4" id="v6s-Zf-hiJ"/>
+                        <outletCollection property="textFieldArr" destination="ymp-Vi-I6a" id="4K7-LU-uFP"/>
+                        <outletCollection property="textFieldArr" destination="6E9-Ow-DpW" id="iIQ-c2-rhE"/>
+                        <outletCollection property="textFieldArr" destination="hxx-d3-AdX" id="W03-KR-1qI"/>
+                        <outletCollection property="textFieldArr" destination="t2g-RX-o4s" id="rHC-SC-uUI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fa6-hd-ayD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
