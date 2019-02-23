@@ -34,6 +34,16 @@
 		18E58ED9205290B000C08E63 /* FTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E58ED7205290B000C08E63 /* FTLabel.m */; };
 		87B3A618C733F003D8EB8413 /* libPods-XMShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5FBAB803EF49C1098615BA /* libPods-XMShop.a */; };
 		DD09327A22216794001777A9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD09327922216794001777A9 /* libsqlite3.tbd */; };
+		DD0932C422216ED5001777A9 /* BGDB.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932AE22216ED5001777A9 /* BGDB.m */; };
+		DD0932C522216ED5001777A9 /* BGTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932B222216ED5001777A9 /* BGTool.m */; };
+		DD0932C622216ED5001777A9 /* NSCache+BGCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932B422216ED5001777A9 /* NSCache+BGCache.m */; };
+		DD0932C722216ED5001777A9 /* NSObject+BGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932B622216ED5001777A9 /* NSObject+BGModel.m */; };
+		DD0932C822216ED5001777A9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932B922216ED5001777A9 /* FMDatabase.m */; };
+		DD0932C922216ED5001777A9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932BB22216ED5001777A9 /* FMDatabaseAdditions.m */; };
+		DD0932CA22216ED5001777A9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932BD22216ED5001777A9 /* FMDatabasePool.m */; };
+		DD0932CB22216ED5001777A9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932BF22216ED5001777A9 /* FMDatabaseQueue.m */; };
+		DD0932CC22216ED5001777A9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932C222216ED5001777A9 /* FMResultSet.m */; };
+		DD0932CD22216ED5001777A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0932C322216ED5001777A9 /* Info.plist */; };
 		DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */; };
 		DD8503772056B91B00C4B750 /* XMDetailPopview.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8503762056B91B00C4B750 /* XMDetailPopview.m */; };
 		DD8503792056B92600C4B750 /* XMDetailPopview.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8503782056B92600C4B750 /* XMDetailPopview.xib */; };
@@ -89,6 +99,28 @@
 		CB5FBAB803EF49C1098615BA /* libPods-XMShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE98B4C371C1A39E723398D /* Pods-XMShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMShop/Pods-XMShop.debug.xcconfig"; sourceTree = "<group>"; };
 		DD09327922216794001777A9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DD0932AD22216ED5001777A9 /* BGDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGDB.h; sourceTree = "<group>"; };
+		DD0932AE22216ED5001777A9 /* BGDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGDB.m; sourceTree = "<group>"; };
+		DD0932AF22216ED5001777A9 /* BGFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGFMDB.h; sourceTree = "<group>"; };
+		DD0932B022216ED5001777A9 /* BGFMDBConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGFMDBConfig.h; sourceTree = "<group>"; };
+		DD0932B122216ED5001777A9 /* BGTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGTool.h; sourceTree = "<group>"; };
+		DD0932B222216ED5001777A9 /* BGTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGTool.m; sourceTree = "<group>"; };
+		DD0932B322216ED5001777A9 /* NSCache+BGCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache+BGCache.h"; sourceTree = "<group>"; };
+		DD0932B422216ED5001777A9 /* NSCache+BGCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+BGCache.m"; sourceTree = "<group>"; };
+		DD0932B522216ED5001777A9 /* NSObject+BGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BGModel.h"; sourceTree = "<group>"; };
+		DD0932B622216ED5001777A9 /* NSObject+BGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BGModel.m"; sourceTree = "<group>"; };
+		DD0932B822216ED5001777A9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		DD0932B922216ED5001777A9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		DD0932BA22216ED5001777A9 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DD0932BB22216ED5001777A9 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DD0932BC22216ED5001777A9 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		DD0932BD22216ED5001777A9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		DD0932BE22216ED5001777A9 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DD0932BF22216ED5001777A9 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DD0932C022216ED5001777A9 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		DD0932C122216ED5001777A9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		DD0932C222216ED5001777A9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		DD0932C322216ED5001777A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMAddGoodViewController.h; sourceTree = "<group>"; };
 		DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMAddGoodViewController.m; sourceTree = "<group>"; };
 		DD8503752056B91B00C4B750 /* XMDetailPopview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMDetailPopview.h; sourceTree = "<group>"; };
@@ -158,6 +190,8 @@
 		183CCA80204FD0EB00B63AA3 /* third(三方) */ = {
 			isa = PBXGroup;
 			children = (
+				DD0932AC22216ED5001777A9 /* BGFMDB */,
+				DD0932B722216ED5001777A9 /* FMDB */,
 				DD09327822216704001777A9 /* iCarousel */,
 			);
 			path = "third(三方)";
@@ -337,6 +371,42 @@
 			path = iCarousel;
 			sourceTree = "<group>";
 		};
+		DD0932AC22216ED5001777A9 /* BGFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				DD0932AD22216ED5001777A9 /* BGDB.h */,
+				DD0932AE22216ED5001777A9 /* BGDB.m */,
+				DD0932AF22216ED5001777A9 /* BGFMDB.h */,
+				DD0932B022216ED5001777A9 /* BGFMDBConfig.h */,
+				DD0932B122216ED5001777A9 /* BGTool.h */,
+				DD0932B222216ED5001777A9 /* BGTool.m */,
+				DD0932B322216ED5001777A9 /* NSCache+BGCache.h */,
+				DD0932B422216ED5001777A9 /* NSCache+BGCache.m */,
+				DD0932B522216ED5001777A9 /* NSObject+BGModel.h */,
+				DD0932B622216ED5001777A9 /* NSObject+BGModel.m */,
+			);
+			path = BGFMDB;
+			sourceTree = "<group>";
+		};
+		DD0932B722216ED5001777A9 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				DD0932B822216ED5001777A9 /* FMDatabase.h */,
+				DD0932B922216ED5001777A9 /* FMDatabase.m */,
+				DD0932BA22216ED5001777A9 /* FMDatabaseAdditions.h */,
+				DD0932BB22216ED5001777A9 /* FMDatabaseAdditions.m */,
+				DD0932BC22216ED5001777A9 /* FMDatabasePool.h */,
+				DD0932BD22216ED5001777A9 /* FMDatabasePool.m */,
+				DD0932BE22216ED5001777A9 /* FMDatabaseQueue.h */,
+				DD0932BF22216ED5001777A9 /* FMDatabaseQueue.m */,
+				DD0932C022216ED5001777A9 /* FMDB.h */,
+				DD0932C122216ED5001777A9 /* FMResultSet.h */,
+				DD0932C222216ED5001777A9 /* FMResultSet.m */,
+				DD0932C322216ED5001777A9 /* Info.plist */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
 		DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +484,7 @@
 				187C79CD2043CF1800388505 /* Assets.xcassets in Resources */,
 				183CCA9D204FEF8C00B63AA3 /* LDMenuContentView.xib in Resources */,
 				183CCA98204FEC9F00B63AA3 /* LDHeaderView.xib in Resources */,
+				DD0932CD22216ED5001777A9 /* Info.plist in Resources */,
 				186866032050D49D00B7834F /* LDNavBar.xib in Resources */,
 				187C79CB2043CF1800388505 /* Main.storyboard in Resources */,
 			);
@@ -470,21 +541,30 @@
 				DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */,
 				183CCA9B204FEF8400B63AA3 /* LDMenuContentView.m in Sources */,
 				18E58EC6205289C300C08E63 /* XMNavigationController.m in Sources */,
+				DD0932C622216ED5001777A9 /* NSCache+BGCache.m in Sources */,
+				DD0932C722216ED5001777A9 /* NSObject+BGModel.m in Sources */,
 				18E58ED020528C1C00C08E63 /* XMStockViewController.m in Sources */,
 				189494EC204520E800E0FC97 /* UIView+Layout.m in Sources */,
 				186866012050D49400B7834F /* LDNavBar.m in Sources */,
+				DD0932C822216ED5001777A9 /* FMDatabase.m in Sources */,
+				DD0932C522216ED5001777A9 /* BGTool.m in Sources */,
 				186865FE2050D01400B7834F /* DCUpDownButton.m in Sources */,
 				183CCA93204FEB5400B63AA3 /* LDMenuViewController.m in Sources */,
+				DD0932CA22216ED5001777A9 /* FMDatabasePool.m in Sources */,
 				187C79D32043CF1800388505 /* main.m in Sources */,
 				183CCA8B204FD39500B63AA3 /* LDHomeView.m in Sources */,
+				DD0932CC22216ED5001777A9 /* FMResultSet.m in Sources */,
 				183CCA83204FD0F400B63AA3 /* iCarousel.m in Sources */,
 				183CCA96204FEC9100B63AA3 /* LDHeaderView.m in Sources */,
+				DD0932CB22216ED5001777A9 /* FMDatabaseQueue.m in Sources */,
 				DD8503772056B91B00C4B750 /* XMDetailPopview.m in Sources */,
 				187C79C52043CF1800388505 /* AppDelegate.m in Sources */,
 				18E58EC920528B5600C08E63 /* XMBaseViewController.m in Sources */,
 				183CCA86204FD15700B63AA3 /* LDHomeViewController.m in Sources */,
+				DD0932C422216ED5001777A9 /* BGDB.m in Sources */,
 				18E58ED9205290B000C08E63 /* FTLabel.m in Sources */,
 				18E58ED520528D0B00C08E63 /* XMGoodCell.m in Sources */,
+				DD0932C922216ED5001777A9 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
