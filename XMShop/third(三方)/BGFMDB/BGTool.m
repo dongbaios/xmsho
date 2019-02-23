@@ -127,7 +127,7 @@ void bg_setDebug(BOOL debug){
 
 /**
  事务操作.
- @return 返回YES提交事务, 返回NO回滚事务.
+ @ return 返回YES提交事务, 返回NO回滚事务.
  */
 void bg_inTransaction(BOOL (^ _Nonnull block)(void)){
     [[BGDB shareManager] inTransaction:block];

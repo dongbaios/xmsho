@@ -26,6 +26,10 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 -(NSArray *)dataArray{
     if (!_dataArray) {
         _dataArray = @[@[@"销售",

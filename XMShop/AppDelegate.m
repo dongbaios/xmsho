@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self setNavi];
+    [self setDB];
     
     sleep(1);
     return YES;
@@ -28,7 +29,53 @@
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
+    [[UINavigationBar appearance] setBarTintColor:BGColor];
     [UINavigationBar appearance].translucent = NO;
+}
+
+- (void)setDB{
+    /**
+     想测试更多功能,打开注释掉的代码即可.
+     */
+    bg_setDebug(YES);//打开调试模式,打印输出调试信息.
+    
+    /**
+     如果频繁操作数据库时,建议进行此设置(即在操作过程不关闭数据库).
+     */
+    //bg_setDisableCloseDB(YES);
+    
+    /**
+     手动关闭数据库(如果设置了bg_setDisableCloseDB(YES)，则在切换bg_setSqliteName前，需要手动关闭数据库一下).
+     */
+    //bg_closeDB();
+    
+    /**
+     自定义数据库名称，否则默认为BGFMDB
+     */
+    bg_setSqliteName(@"XMShopDB");
+    
+    //删除自定义数据库.
+    //bg_deleteSqlite(@"Tencent");
+    
+    /**
+     直接存储数组.
+     */
+    //[self testSaveArray];
+    
+    /**
+     直接存储字典.
+     */
+    //[self testSaveDictionary];
+    /**
+     直接存储自定义对象.
+     */
+//    People* p = [self people];
+//    p.bg_tableName = bg_tablename;//自定义数据库表名称(库自带的字段).
+    /**
+     存储.
+     */
+//    [p bg_save];
 }
 
 

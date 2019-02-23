@@ -7,7 +7,8 @@
 //
 
 #import "XMAddGoodViewController.h"
-#import "LDNavBar.h"
+#import "XMGoodModel.h"
+#import "BGDB.h"
 @interface XMAddGoodViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameLable;
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *storeNum;
 @property (weak, nonatomic) IBOutlet UITextView *descripte;
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFieldArr;
+/** 商品模型 */
+@property (strong,nonatomic)XMGoodModel *goodModel;
 
 @end
 
@@ -48,7 +51,7 @@
 {
     [super viewWillDisappear:animated];
     
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
     [self.view endEditing:YES];
 }
 
@@ -57,6 +60,41 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)sureAdd:(UIButton *)sender {
+    self.goodModel = [XMGoodModel new];
+    self.goodModel.goodName = self.nameLable.text;
+    self.goodModel.image = [UIImage imageNamed:@"danju_icon"];
+    XMGoodType *type = [XMGoodType new];
+    type.typeName = @"鱼类";
+    type.typeId = 1;
+    self.goodModel.goodType = type;
+    self.goodModel.sellPrice = self.SellPrice.text.floatValue;
+    self.goodModel.buyPrice = self.buyPriceLable.text.floatValue;
+    self.goodModel.goodCode = self.barCode.text;
+    self.goodModel.goodUnit = self.goodUnit.text;
+    self.goodModel.storeNum = self.storeNum.text.integerValue;
+    self.goodModel.desc = self.descripte.text;
+    [self addGood];
+}
+
+
+/** 添加库存，添加商品到数据库 */
+- (void)addGood{
+    /**
+    直接存储自定义对象.
+    */
+    
+    self.goodModel.bg_tableName = xm_goodStoreTable;//自定义数据库表名称(库自带的字段).
+    /**
+     存储.
+     */
+    [self.goodModel bg_save];
+}
+
+- (IBAction)addImage:(UIButton *)sender {
+    
+    
+}
 
 #pragma mark - textfield delegate
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{

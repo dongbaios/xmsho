@@ -44,7 +44,11 @@
 		DD0932CB22216ED5001777A9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932BF22216ED5001777A9 /* FMDatabaseQueue.m */; };
 		DD0932CC22216ED5001777A9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932C222216ED5001777A9 /* FMResultSet.m */; };
 		DD0932CD22216ED5001777A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0932C322216ED5001777A9 /* Info.plist */; };
+		DD0932D32221725E001777A9 /* XMGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932D22221725E001777A9 /* XMGoodModel.m */; };
+		DD0932D6222195CE001777A9 /* XMContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932D5222195CE001777A9 /* XMContacts.m */; };
 		DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */; };
+		DD83316622219B2900C4EC17 /* DCCategrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD83316422219B2800C4EC17 /* DCCategrayViewController.m */; };
+		DD8331692221A86F00C4EC17 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8331682221A86E00C4EC17 /* UIViewController+Alert.m */; };
 		DD8503772056B91B00C4B750 /* XMDetailPopview.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8503762056B91B00C4B750 /* XMDetailPopview.m */; };
 		DD8503792056B92600C4B750 /* XMDetailPopview.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8503782056B92600C4B750 /* XMDetailPopview.xib */; };
 /* End PBXBuildFile section */
@@ -121,8 +125,16 @@
 		DD0932C122216ED5001777A9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		DD0932C222216ED5001777A9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		DD0932C322216ED5001777A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD0932D12221725E001777A9 /* XMGoodModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGoodModel.h; sourceTree = "<group>"; };
+		DD0932D22221725E001777A9 /* XMGoodModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGoodModel.m; sourceTree = "<group>"; };
+		DD0932D4222195CE001777A9 /* XMContacts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMContacts.h; sourceTree = "<group>"; };
+		DD0932D5222195CE001777A9 /* XMContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMContacts.m; sourceTree = "<group>"; };
 		DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMAddGoodViewController.h; sourceTree = "<group>"; };
 		DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMAddGoodViewController.m; sourceTree = "<group>"; };
+		DD83316422219B2800C4EC17 /* DCCategrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCategrayViewController.m; sourceTree = "<group>"; };
+		DD83316522219B2900C4EC17 /* DCCategrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCategrayViewController.h; sourceTree = "<group>"; };
+		DD8331672221A86E00C4EC17 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
+		DD8331682221A86E00C4EC17 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
 		DD8503752056B91B00C4B750 /* XMDetailPopview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMDetailPopview.h; sourceTree = "<group>"; };
 		DD8503762056B91B00C4B750 /* XMDetailPopview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMDetailPopview.m; sourceTree = "<group>"; };
 		DD8503782056B92600C4B750 /* XMDetailPopview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XMDetailPopview.xib; sourceTree = "<group>"; };
@@ -183,6 +195,8 @@
 			children = (
 				189494EA204520E700E0FC97 /* UIView+Layout.h */,
 				189494EB204520E700E0FC97 /* UIView+Layout.m */,
+				DD8331672221A86E00C4EC17 /* UIViewController+Alert.h */,
+				DD8331682221A86E00C4EC17 /* UIViewController+Alert.m */,
 			);
 			path = "Category(分类)";
 			sourceTree = "<group>";
@@ -306,6 +320,8 @@
 		18E58EBD205287A500C08E63 /* Detail(详细功能) */ = {
 			isa = PBXGroup;
 			children = (
+				DD83316322219B2200C4EC17 /* goodType商品种类 */,
+				DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */,
 				18E58EBE205287A500C08E63 /* model */,
 				18E58EBF205287A500C08E63 /* vc */,
 				18E58EC0205287A500C08E63 /* view */,
@@ -323,7 +339,6 @@
 		18E58EBF205287A500C08E63 /* vc */ = {
 			isa = PBXGroup;
 			children = (
-				DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */,
 				18E58ECD20528C1C00C08E63 /* XMStockViewController.h */,
 				18E58ECE20528C1C00C08E63 /* XMStockViewController.m */,
 				18E58ECF20528C1C00C08E63 /* XMStockViewController.xib */,
@@ -407,13 +422,50 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
-		DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */ = {
+		DD0932CE22217221001777A9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DD0932D12221725E001777A9 /* XMGoodModel.h */,
+				DD0932D22221725E001777A9 /* XMGoodModel.m */,
+				DD0932D4222195CE001777A9 /* XMContacts.h */,
+				DD0932D5222195CE001777A9 /* XMContacts.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DD0932CF22217221001777A9 /* vc */ = {
 			isa = PBXGroup;
 			children = (
 				DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */,
 				DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */,
 			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		DD0932D022217221001777A9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */ = {
+			isa = PBXGroup;
+			children = (
+				DD0932CE22217221001777A9 /* model */,
+				DD0932CF22217221001777A9 /* vc */,
+				DD0932D022217221001777A9 /* view */,
+			);
 			path = "addGood(添加商品)";
+			sourceTree = "<group>";
+		};
+		DD83316322219B2200C4EC17 /* goodType商品种类 */ = {
+			isa = PBXGroup;
+			children = (
+				DD83316522219B2900C4EC17 /* DCCategrayViewController.h */,
+				DD83316422219B2800C4EC17 /* DCCategrayViewController.m */,
+			);
+			path = "goodType商品种类";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +597,7 @@
 				DD0932C722216ED5001777A9 /* NSObject+BGModel.m in Sources */,
 				18E58ED020528C1C00C08E63 /* XMStockViewController.m in Sources */,
 				189494EC204520E800E0FC97 /* UIView+Layout.m in Sources */,
+				DD8331692221A86F00C4EC17 /* UIViewController+Alert.m in Sources */,
 				186866012050D49400B7834F /* LDNavBar.m in Sources */,
 				DD0932C822216ED5001777A9 /* FMDatabase.m in Sources */,
 				DD0932C522216ED5001777A9 /* BGTool.m in Sources */,
@@ -553,6 +606,7 @@
 				DD0932CA22216ED5001777A9 /* FMDatabasePool.m in Sources */,
 				187C79D32043CF1800388505 /* main.m in Sources */,
 				183CCA8B204FD39500B63AA3 /* LDHomeView.m in Sources */,
+				DD0932D32221725E001777A9 /* XMGoodModel.m in Sources */,
 				DD0932CC22216ED5001777A9 /* FMResultSet.m in Sources */,
 				183CCA83204FD0F400B63AA3 /* iCarousel.m in Sources */,
 				183CCA96204FEC9100B63AA3 /* LDHeaderView.m in Sources */,
@@ -562,7 +616,9 @@
 				18E58EC920528B5600C08E63 /* XMBaseViewController.m in Sources */,
 				183CCA86204FD15700B63AA3 /* LDHomeViewController.m in Sources */,
 				DD0932C422216ED5001777A9 /* BGDB.m in Sources */,
+				DD0932D6222195CE001777A9 /* XMContacts.m in Sources */,
 				18E58ED9205290B000C08E63 /* FTLabel.m in Sources */,
+				DD83316622219B2900C4EC17 /* DCCategrayViewController.m in Sources */,
 				18E58ED520528D0B00C08E63 /* XMGoodCell.m in Sources */,
 				DD0932C922216ED5001777A9 /* FMDatabaseAdditions.m in Sources */,
 			);

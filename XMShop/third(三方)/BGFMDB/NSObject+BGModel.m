@@ -328,7 +328,7 @@
  1.将People类数据中user.student.human.body等于"小芳"的数据更新为当前对象的数据:
      where = [NSString stringWithFormat:@"where %@",bg_keyPathValues(@[@"user.student.human.body",bg_equal,@"小芳"])];
  2.将People类中name等于"马云爸爸"的数据更新为当前对象的数据:
-     where = [NSString stringWithFormat:@"where %@=%@",bg_sqlKey(@"name"),bg_sqlValue(@"马云爸爸")];
+     where = ;
  */
 -(BOOL)bg_updateWhere:(NSString* _Nonnull)where{
     NSAssert(where && where.length,@"条件语句不能为空!");

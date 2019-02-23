@@ -34,5 +34,13 @@
 
 #define HEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]
 
+#define BGColor  HEXCOLOR(0xF3F8FB) //背景色
+#define LightBlue   HEXCOLOR(7EB1F3) //浅蓝 按钮色
+
+
+/***************** 数据库  ******************/
+#define xm_goodStoreTable    @"xm_goodStoreTable"//商品库存表
+#define xm_goodTypeTable    @"xm_goodTypeTable"//商品库存表
+
 
 #endif /* Macros_h */
