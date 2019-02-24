@@ -9,6 +9,7 @@
 #import "XMStockViewController.h"
 #import "XMGoodCell.h"
 #import "XMDetailPopview.h"
+#import "XMGoodModel.h"
 @interface XMStockViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UITextField *searchBar;
@@ -19,8 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self requsetData];
 }
+
+- (void)requsetData{
+    [XMGoodModel bg_findAllAsync:xm_goodStoreTable complete:^(NSArray * _Nullable array) {
+        for (XMGoodModel *model in array) {
+            NSLog(@"%@",model.description);
+        }
+    }];
+}
+
 - (IBAction)endedit:(UITextField *)sender {
     [self.view endEditing:YES];
 }

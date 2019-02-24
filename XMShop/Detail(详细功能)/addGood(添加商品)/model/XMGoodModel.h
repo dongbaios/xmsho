@@ -25,11 +25,11 @@
 /** 售价 */
 @property (assign,nonatomic)CGFloat sellPrice;
 /** 收货人 (卖给了谁)*/
-@property (copy,nonatomic)XMContacts *goodToP;
+@property (strong,nonatomic)XMContacts *goodToP;
 /** 进价 */
 @property (assign,nonatomic)CGFloat buyPrice;
 /** 供应商 （从哪进的货）*/
-@property (copy,nonatomic)XMContacts *goodFromP;
+@property (strong,nonatomic)XMContacts *goodFromP;
 /** 货号/条形码号 */
 @property (copy,nonatomic)NSString *goodCode;
 /** 单位规格（个，根，条。。。） */

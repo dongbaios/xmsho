@@ -12,7 +12,7 @@
 
 /** 姓名 */
 @property (copy,nonatomic)NSString *name;
-/** 所属公司 */
+/** 所属公司 店铺名称 */
 @property (copy,nonatomic)NSString *companyName;
 /** 联系电话 */
 @property (copy,nonatomic)NSString *phoneNo;

@@ -27,6 +27,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 -(NSArray *)menuData{
     if (!_menuData) {
         NSArray *arr0 = @[
@@ -178,9 +183,29 @@
 }
 
 - (void)goToDetail:(NSInteger)index{
-    XMStockViewController *vc =[XMStockViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+
+    NSInteger vcNo = self.pageControl.currentPage *10 + index;
+    /** index和对应storyboard映射dic */
+    NSDictionary *sbDic = @{@"0":@"XMStockViewController",
+                            @"1":@"sb:XMAddGood"
+                            };
+    NSString *sbNameOrVCName =  sbDic[[NSString stringWithFormat:@"%ld",vcNo]];
+    if (!sbNameOrVCName) {
+        return;
+    }
+    if ([sbNameOrVCName containsString:@"sb"]) {
+        UIStoryboard *stroyBoard=[UIStoryboard storyboardWithName:[sbNameOrVCName substringFromIndex:3] bundle:nil];
+        UIViewController *vc=[stroyBoard instantiateInitialViewController];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        
+        UIViewController *vc =[NSClassFromString(sbNameOrVCName) new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+    
 }
+
 
 
 - (void)didReceiveMemoryWarning {

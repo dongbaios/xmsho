@@ -7,7 +7,12 @@
 //
 
 #import "XMAddGoodViewController.h"
+#import "DCCategrayViewController.h"
+#import "XMServiceViewController.h"
+
 #import "XMGoodModel.h"
+#import "XMContacts.h"
+
 #import "BGDB.h"
 @interface XMAddGoodViewController ()<UITextFieldDelegate>
 
@@ -19,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *goodUnit;
 @property (weak, nonatomic) IBOutlet UITextField *storeNum;
 @property (weak, nonatomic) IBOutlet UITextView *descripte;
+@property (weak, nonatomic) IBOutlet UILabel *serviceName;
+
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *textFieldArr;
 /** 商品模型 */
 @property (strong,nonatomic)XMGoodModel *goodModel;
@@ -30,7 +37,8 @@
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self performSelector:@selector(showKeyBoard) withObject:nil afterDelay:0.75];
+    self.goodModel = [XMGoodModel new];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -43,7 +51,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.nameLable becomeFirstResponder];
+    
 }
 
 
@@ -55,19 +63,20 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark -  事件处理
-- (void)back{
-    [self.navigationController popViewControllerAnimated:YES];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -  事件处理
+- (void)showKeyBoard{
+    [self.nameLable becomeFirstResponder];
+}
+
+/** 模型数据填充 */
 - (IBAction)sureAdd:(UIButton *)sender {
-    self.goodModel = [XMGoodModel new];
     self.goodModel.goodName = self.nameLable.text;
     self.goodModel.image = [UIImage imageNamed:@"danju_icon"];
-    XMGoodType *type = [XMGoodType new];
-    type.typeName = @"鱼类";
-    type.typeId = 1;
-    self.goodModel.goodType = type;
     self.goodModel.sellPrice = self.SellPrice.text.floatValue;
     self.goodModel.buyPrice = self.buyPriceLable.text.floatValue;
     self.goodModel.goodCode = self.barCode.text;
@@ -88,7 +97,15 @@
     /**
      存储.
      */
-    [self.goodModel bg_save];
+    [SVProgressHUD show];
+    [self.goodModel bg_saveAsync:^(BOOL isSuccess) {
+        if (isSuccess) {
+            [SVProgressHUD showSuccessWithStatus:@"添加成功"];
+        }else{
+            [SVProgressHUD showSuccessWithStatus:@"添加失败"];
+        }
+        
+    }];
 }
 
 - (IBAction)addImage:(UIButton *)sender {
@@ -110,78 +127,30 @@
 
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-//#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-//    return 0;
-//}
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - storyboard跳转
+/** 跳转相关 */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.destinationViewController isKindOfClass:[DCCategrayViewController class]]) {
+        WEAKSELF
+        DCCategrayViewController *toVC = segue.destinationViewController;
+        toVC.backBlock = ^(XMGoodType *type) {
+            weakSelf.goodModel.goodType = type;
+            weakSelf.typeLable.text = type.typeName;
+        };
+    }else if ([segue.destinationViewController isKindOfClass:[XMServiceViewController class]]){
+        WEAKSELF
+        XMServiceViewController *toVC = segue.destinationViewController;
+        toVC.backBlock = ^(XMContacts *service) {
+            weakSelf.goodModel.goodFromP = service;
+            weakSelf.serviceName.text = service.companyName;
+        };
+    }
 }
-*/
 
-
+/**  去除按钮所在cell上面的分割线 */
 -(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
         
     
@@ -195,6 +164,10 @@
             
         }
     }
+}
+
+-(void)dealloc{
+    
 }
 
 @end

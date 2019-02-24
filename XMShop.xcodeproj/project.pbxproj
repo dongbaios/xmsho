@@ -47,6 +47,8 @@
 		DD0932D32221725E001777A9 /* XMGoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932D22221725E001777A9 /* XMGoodModel.m */; };
 		DD0932D6222195CE001777A9 /* XMContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0932D5222195CE001777A9 /* XMContacts.m */; };
 		DD0B22B3221FF9D1002B6BC1 /* XMAddGoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */; };
+		DD3F520422226F4900178BC3 /* XMServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3F520322226F4900178BC3 /* XMServiceViewController.m */; };
+		DD3F520B22227AE800178BC3 /* XMAddGood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3F520A22227AE800178BC3 /* XMAddGood.storyboard */; };
 		DD83316622219B2900C4EC17 /* DCCategrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD83316422219B2800C4EC17 /* DCCategrayViewController.m */; };
 		DD8331692221A86F00C4EC17 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8331682221A86E00C4EC17 /* UIViewController+Alert.m */; };
 		DD8503772056B91B00C4B750 /* XMDetailPopview.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8503762056B91B00C4B750 /* XMDetailPopview.m */; };
@@ -131,6 +133,9 @@
 		DD0932D5222195CE001777A9 /* XMContacts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMContacts.m; sourceTree = "<group>"; };
 		DD0B22B1221FF9D1002B6BC1 /* XMAddGoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMAddGoodViewController.h; sourceTree = "<group>"; };
 		DD0B22B2221FF9D1002B6BC1 /* XMAddGoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMAddGoodViewController.m; sourceTree = "<group>"; };
+		DD3F520222226F4900178BC3 /* XMServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMServiceViewController.h; sourceTree = "<group>"; };
+		DD3F520322226F4900178BC3 /* XMServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMServiceViewController.m; sourceTree = "<group>"; };
+		DD3F520A22227AE800178BC3 /* XMAddGood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = XMAddGood.storyboard; sourceTree = "<group>"; };
 		DD83316422219B2800C4EC17 /* DCCategrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCategrayViewController.m; sourceTree = "<group>"; };
 		DD83316522219B2900C4EC17 /* DCCategrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCategrayViewController.h; sourceTree = "<group>"; };
 		DD8331672221A86E00C4EC17 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
@@ -320,10 +325,12 @@
 		18E58EBD205287A500C08E63 /* Detail(详细功能) */ = {
 			isa = PBXGroup;
 			children = (
+				DD3F520A22227AE800178BC3 /* XMAddGood.storyboard */,
+				DD3F51FE22226EED00178BC3 /* servicer(供应商) */,
 				DD83316322219B2200C4EC17 /* goodType商品种类 */,
 				DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */,
 				18E58EBE205287A500C08E63 /* model */,
-				18E58EBF205287A500C08E63 /* vc */,
+				18E58EBF205287A500C08E63 /* goodStore(商品库存) */,
 				18E58EC0205287A500C08E63 /* view */,
 			);
 			path = "Detail(详细功能)";
@@ -336,14 +343,14 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		18E58EBF205287A500C08E63 /* vc */ = {
+		18E58EBF205287A500C08E63 /* goodStore(商品库存) */ = {
 			isa = PBXGroup;
 			children = (
 				18E58ECD20528C1C00C08E63 /* XMStockViewController.h */,
 				18E58ECE20528C1C00C08E63 /* XMStockViewController.m */,
 				18E58ECF20528C1C00C08E63 /* XMStockViewController.xib */,
 			);
-			path = vc;
+			path = "goodStore(商品库存)";
 			sourceTree = "<group>";
 		};
 		18E58EC0205287A500C08E63 /* view */ = {
@@ -459,6 +466,39 @@
 			path = "addGood(添加商品)";
 			sourceTree = "<group>";
 		};
+		DD3F51FE22226EED00178BC3 /* servicer(供应商) */ = {
+			isa = PBXGroup;
+			children = (
+				DD3F520022226F2100178BC3 /* controller */,
+				DD3F520122226F2100178BC3 /* model */,
+				DD3F51FF22226F2100178BC3 /* view */,
+			);
+			path = "servicer(供应商)";
+			sourceTree = "<group>";
+		};
+		DD3F51FF22226F2100178BC3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DD3F520022226F2100178BC3 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD3F520222226F4900178BC3 /* XMServiceViewController.h */,
+				DD3F520322226F4900178BC3 /* XMServiceViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		DD3F520122226F2100178BC3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		DD83316322219B2200C4EC17 /* goodType商品种类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +578,7 @@
 				183CCA98204FEC9F00B63AA3 /* LDHeaderView.xib in Resources */,
 				DD0932CD22216ED5001777A9 /* Info.plist in Resources */,
 				186866032050D49D00B7834F /* LDNavBar.xib in Resources */,
+				DD3F520B22227AE800178BC3 /* XMAddGood.storyboard in Resources */,
 				187C79CB2043CF1800388505 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,6 +640,7 @@
 				189494EC204520E800E0FC97 /* UIView+Layout.m in Sources */,
 				DD8331692221A86F00C4EC17 /* UIViewController+Alert.m in Sources */,
 				186866012050D49400B7834F /* LDNavBar.m in Sources */,
+				DD3F520422226F4900178BC3 /* XMServiceViewController.m in Sources */,
 				DD0932C822216ED5001777A9 /* FMDatabase.m in Sources */,
 				DD0932C522216ED5001777A9 /* BGTool.m in Sources */,
 				186865FE2050D01400B7834F /* DCUpDownButton.m in Sources */,

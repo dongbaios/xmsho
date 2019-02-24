@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @class XMGoodType;
 @interface DCCategrayViewController : UIViewController
-@property (copy,nonatomic)void (^backBlock) (XMGoodType *typeId);
+@property (copy,nonatomic)void (^backBlock) (XMGoodType *type);
 @end
