@@ -21,7 +21,7 @@
 /** 商品图片 */
 @property (strong,nonatomic)UIImage *image;
 /** 商品类别 */
-@property (strong,nonatomic)XMGoodType *goodType;
+@property (assign,nonatomic)NSInteger typeId;
 /** 售价 */
 @property (assign,nonatomic)CGFloat sellPrice;
 /** 收货人 (卖给了谁)*/

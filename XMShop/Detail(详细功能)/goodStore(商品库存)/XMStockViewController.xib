@@ -28,7 +28,7 @@
                         <constraint firstAttribute="height" constant="40" id="Yqh-iK-nJs"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-6O-00Y">
@@ -55,6 +55,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32z-T0-OaJ">
                     <rect key="frame" x="305" y="25" width="62" height="30"/>
                     <state key="normal" title="添加商品"/>
+                    <connections>
+                        <action selector="addGood:" destination="-1" eventType="touchUpInside" id="1b0-l2-wzZ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.95227056741714478" green="0.97246712446212769" blue="0.98490113019943237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

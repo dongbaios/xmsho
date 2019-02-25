@@ -108,9 +108,12 @@
     WEAKSELF
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
 
-        XMGoodType *type = [XMGoodType new];
+        __block XMGoodType *type = [XMGoodType new];
         type.typeName = alter.textFields.firstObject.text;
+        //插入数据
         [type bg_saveAsync:^(BOOL isSuccess) {
+            //将bg_id值付给type_id
+            bg_executeSql(@"update XMGoodType SET BG_typeId = BG_bg_id ", nil, nil);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf requestData];
             });

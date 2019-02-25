@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgV;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *num;
+/** 单价 */
 @property (weak, nonatomic) IBOutlet UILabel *payNum;
 
 @end

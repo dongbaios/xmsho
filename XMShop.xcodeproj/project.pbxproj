@@ -216,14 +216,14 @@
 			path = "third(三方)";
 			sourceTree = "<group>";
 		};
-		183CCA8D204FEABE00B63AA3 /* Menu(菜单) */ = {
+		183CCA8D204FEABE00B63AA3 /* Menu(功能菜单) */ = {
 			isa = PBXGroup;
 			children = (
 				183CCA8E204FEB3600B63AA3 /* vc */,
 				183CCA8F204FEB3600B63AA3 /* model */,
 				183CCA90204FEB3600B63AA3 /* view */,
 			);
-			path = "Menu(菜单)";
+			path = "Menu(功能菜单)";
 			sourceTree = "<group>";
 		};
 		183CCA8E204FEB3600B63AA3 /* vc */ = {
@@ -306,7 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				183CCA7B204FCFCC00B63AA3 /* Home(首页) */,
-				183CCA8D204FEABE00B63AA3 /* Menu(菜单) */,
+				183CCA8D204FEABE00B63AA3 /* Menu(功能菜单) */,
 				18E58EBD205287A500C08E63 /* Detail(详细功能) */,
 				186865FB2050CFF800B7834F /* CustomView */,
 				183CCA80204FD0EB00B63AA3 /* third(三方) */,
@@ -329,18 +329,10 @@
 				DD3F51FE22226EED00178BC3 /* servicer(供应商) */,
 				DD83316322219B2200C4EC17 /* goodType商品种类 */,
 				DD0B22AD221FF945002B6BC1 /* addGood(添加商品) */,
-				18E58EBE205287A500C08E63 /* model */,
 				18E58EBF205287A500C08E63 /* goodStore(商品库存) */,
 				18E58EC0205287A500C08E63 /* view */,
 			);
 			path = "Detail(详细功能)";
-			sourceTree = "<group>";
-		};
-		18E58EBE205287A500C08E63 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		18E58EBF205287A500C08E63 /* goodStore(商品库存) */ = {

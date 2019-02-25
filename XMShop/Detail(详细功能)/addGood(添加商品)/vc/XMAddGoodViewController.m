@@ -137,7 +137,7 @@
         WEAKSELF
         DCCategrayViewController *toVC = segue.destinationViewController;
         toVC.backBlock = ^(XMGoodType *type) {
-            weakSelf.goodModel.goodType = type;
+            weakSelf.goodModel.typeId = type.typeId;
             weakSelf.typeLable.text = type.typeName;
         };
     }else if ([segue.destinationViewController isKindOfClass:[XMServiceViewController class]]){
